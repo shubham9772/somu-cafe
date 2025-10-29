@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somu's Café & Bakery, Mansarovar Jaipur | Cakes, Coffee, Pizzas & More</title>
+    <meta name="description" content="Café & bakery near ISKCON Temple, Mansarovar. Fresh cakes, pastries, coffee, pizzas, pastas—plus Roshi Restaurant, Iktara Banquet & Hotel Archway. Dine-in, takeaway & delivery.">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #8B4513;
+            --primary-light: #A0522D;
+            --secondary: #D4AF37;
+            --accent: #C19A6B;
+            --light: #F5F5DC;
+            --dark: #3E2723;
+            --text: #333333;
+            --white: #FFFFFF;
+            --gray: #F8F8F8;
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-light {
+            background-color: var(--light);
+        }
+        
+        .section-gray {
+            background-color: var(--gray);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--dark);
+        }
+        
+        .btn-secondary:hover {
+            background: #E6C158;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-center h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-btns {
+            margin-top: 2rem;
+        }
+        
+        .microcopy {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* USP Section */
+        .usps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .usp-card {
+            flex: 1;
+            min-width: 250px;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .usp-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .usp-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .usp-card h3 {
+            margin-bottom: 1rem;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Menu Section */
+        .category-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+        
+        .chip {
+            padding: 8px 16px;
+            background: var(--white);
+            border: 1px solid var(--accent);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .chip.active, .chip:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        
+        .menu-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .menu-item {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .menu-item-content {
+            padding: 1.5rem;
+        }
+        
+        .menu-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .menu-item p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        .menu-ctas {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        /* Services Sections */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-card-content {
+            padding: 1.5rem;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .amenities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .amenity-tag {
+            padding: 4px 10px;
+            background: var(--light);
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 200px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Reviews */
+        .reviews-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            padding: 1rem 0;
+            scrollbar-width: thin;
+        }
+        
+        .review-card {
+            min-width: 300px;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .review-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        /* Location */
+        .location-container {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+        
+        .location-info {
+            flex: 1;
+        }
+        
+        .location-map {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .location-map iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        
+        .contact-details {
+            margin: 1.5rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-icon {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .footer-links-column h4 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .footer-links-column ul {
+            list-style: none;
+        }
+        
+        .footer-links-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links-column ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links-column ul li a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .location-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: var(--transition);
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 1rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .usps {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Somu's <span>Café</span></a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#custom-cakes">Custom Cakes</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#location">Visit Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Freshly Baked. Warmly Served.</h1>
+                <p>Near ISKCON Temple, Mansarovar, Jaipur — artisanal cakes, pastries, coffees, pizzas, pastas & continental favorites.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn">Order Online</a>
+                    <a href="#menu" class="btn btn-secondary">View Menu</a>
+                    <a href="#" class="btn btn-outline">Reserve a Table</a>
+                </div>
+                <p class="microcopy">Available for dine-in, takeaway & delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section -->
+    <section class="section-light">
+        <div class="container">
+            <div class="usps">
+                <div class="usp-card">
+                    <div class="usp-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Premium Ingredients</h3>
+                    <p>Quality you can taste in every bite.</p>
+                </div>
+                <div class="usp-card">
+                    <div class="usp-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Cozy Ambience</h3>
+                    <p>Warm, relaxing café atmosphere.</p>
+                </div>
+                <div class="usp-card">
+                    <div class="usp-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Multi-Experience</h3>
+                    <p>Café · Restaurant · Banquet · Hotel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Welcome to Somu's Café & Bakery</h2>
+                    <p>We're your neighborhood café & bakery near ISKCON Temple, Mansarovar. From fresh bakes and handcrafted coffee to pizzas, pastas and continental plates, we pair great taste with warm hospitality.</p>
+                    <p>Explore more with Roshi Restaurant (refined dining), Iktara Banquet (celebrations) and Hotel Archway (elegant, budget-friendly stays)—all under one roof.</p>
+                    <a href="#" class="btn">Learn More About Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Cafe Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section-light" id="menu">
+        <div class="container">
+            <div class="text-center">
+                <h2>Our Menu</h2>
+                <p>Browse favorites or explore the full menu.</p>
+            </div>
+            
+            <div class="category-chips">
+                <div class="chip active">Cakes</div>
+                <div class="chip">Pastries</div>
+                <div class="chip">Coffee & Espresso</div>
+                <div class="chip">Frappes</div>
+                <div class="chip">Pizzas</div>
+                <div class="chip">Pastas</div>
+                <div class="chip">Sandwiches</div>
+                <div class="chip">Sides</div>
+            </div>
+            
+            <div class="menu-highlights">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1089&q=80" alt="Signature Truffle Cake">
+                    <div class="menu-item-content">
+                        <h3>Signature Truffle Cake</h3>
+                        <p>Rich, moist classic for celebrations</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Classic Tiramisu">
+                    <div class="menu-item-content">
+                        <h3>Classic Tiramisu</h3>
+                        <p>Espresso-kissed indulgence</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Margherita Pizza">
+                    <div class="menu-item-content">
+                        <h3>Margherita Pizza</h3>
+                        <p>Stone-baked, fresh basil</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Penne Arrabbiata">
+                    <div class="menu-item-content">
+                        <h3>Penne Arrabbiata</h3>
+                        <p>Spicy & tangy comfort</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="Hazelnut Cappuccino">
+                    <div class="menu-item-content">
+                        <h3>Hazelnut Cappuccino</h3>
+                        <p>Creamy with a nutty finish</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-ctas">
+                <a href="#" class="btn">View Full Menu</a>
+                <a href="#" class="btn btn-secondary">Order Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Cakes -->
+    <section id="custom-cakes">
+        <div class="container">
+            <div class="text-center">
+                <h2>Custom Cakes for Every Occasion</h2>
+                <p>Birthdays, anniversaries, or corporate events—share your theme and flavor, we'll bake it to perfection.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Custom Cake">
+                </div>
+                <div class="about-text">
+                    <ul style="list-style: none; margin-bottom: 2rem;">
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Egg & eggless options</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Photo & theme cakes</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Same-day options (subject to availability)</li>
+                    </ul>
+                    <a href="#" class="btn">Request a Custom Cake</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-gray" id="services">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Roshi Restaurant -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Roshi Restaurant">
+                    <div class="service-card-content">
+                        <h3>Roshi Restaurant — Refined Dining</h3>
+                        <p>A curated continental menu in a relaxed, family-friendly setting. Perfect for lunches, dinners and small gatherings.</p>
+                        <a href="#" class="btn">Reserve a Table</a>
+                    </div>
+                </div>
+                
+                <!-- Iktara Banquet -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1494&q=80" alt="Iktara Banquet">
+                    <div class="service-card-content">
+                        <h3>Iktara Banquet — Celebrate with Us</h3>
+                        <p>Host birthdays, anniversaries and intimate events with customized décor and in-house catering.</p>
+                        <div class="amenities">
+                            <span class="amenity-tag">Up to 80 guests</span>
+                            <span class="amenity-tag">Décor & AV support</span>
+                            <span class="amenity-tag">Curated menus</span>
+                        </div>
+                        <a href="#" class="btn">Enquire for Banquet</a>
+                    </div>
+                </div>
+                
+                <!-- Hotel Archway -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Hotel Archway">
+                    <div class="service-card-content">
+                        <h3>Hotel Archway — Cozy Stays Next Door</h3>
+                        <p>Eight elegant, budget-friendly rooms with modern comforts for business and leisure.</p>
+                        <div class="amenities">
+                            <span class="amenity-tag">AC</span>
+                            <span class="amenity-tag">Wi-Fi</span>
+                            <span class="amenity-tag">Room Service</span>
+                            <span class="amenity-tag">Prime Location</span>
+                        </div>
+                        <a href="#" class="btn">Check Room Availability</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <div class="text-center">
+                <h2>A Peek into Our World</h2>
+                <p>Cakes, pastries, coffee art, interiors, banquet décor and rooms.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80" alt="Cakes">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab794f27d2e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Pastries">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Coffee Art">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Interiors">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1494&q=80" alt="Banquet">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Rooms">
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="#" class="btn">View Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section-light" id="reviews">
+        <div class="container">
+            <div class="text-center">
+                <h2>What Guests Love</h2>
+            </div>
+            
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-text">
+                        "Fantastic coffee and the truffle cake is a must-try. Cozy vibe and polite staff."
+                    </div>
+                    <div class="review-author">— Aakriti S.</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-text">
+                        "Perfect spot near ISKCON to hang out. Loved the pizzas!"
+                    </div>
+                    <div class="review-author">— Rahul M.</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-text">
+                        "The custom cake for my daughter's birthday was absolutely beautiful and delicious!"
+                    </div>
+                    <div class="review-author">— Priya K.</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-text">
+                        "Great place for business meetings. Good coffee and quiet atmosphere."
+                    </div>
+                    <div class="review-author">— Vikram J.</div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="#" class="btn">See More Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Hours -->
+    <section id="location">
+        <div class="container">
+            <div class="text-center">
+                <h2>Visit Us</h2>
+            </div>
+            
+            <div class="location-container">
+                <div class="location-info">
+                    <h3>Location & Hours</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <span>Near ISKCON Temple, Mansarovar, Jaipur</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <span>Mon–Sun: 8:00 AM – 11:00 PM</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span>+91-XXXXXXXXXX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp contact-icon"></i>
+                            <span>+91-XXXXXXXXXX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span>info@somuscafe.in</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-btns">
+                        <a href="#" class="btn">Get Directions</a>
+                        <a href="#" class="btn btn-secondary">Call Now</a>
+                        <a href="#" class="btn btn-outline">WhatsApp Us</a>
+                    </div>
+                </div>
+                
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.396291370593!2d75.75346731504408!3d26.89223298313734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6b5b0728c5d%3A0x3d2c5f3c8b0a9b0c!2sISKCON%20Temple%2C%20Jaipur!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">Somu's <span>Café</span></div>
+                    <p>Café • Restaurant • Banquet • Hotel</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#custom-cakes">Custom Cakes</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Roshi Restaurant</a></li>
+                            <li><a href="#services">Iktara Banquet</a></li>
+                            <li><a href="#services">Hotel Archway</a></li>
+                            <li><a href="#services">Catering</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© Somu's Café & Bakery, Jaipur. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+            }
+        });
+        
+        // Category chips functionality
+        const chips = document.querySelectorAll('.chip');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
